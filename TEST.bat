@@ -1,3 +1,3 @@
-heroku run curl -X POST -H "Content-Type: application/json" -d '{  "setting_type":"call_to_actions",  "thread_state":"new_thread",  "call_to_actions":[    {      "payload":"Greeting"    }  ]}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAADa2Djz0OgBAHL6QaaGl4fJNv4xGbllGZCI1co9BtbVU4RkY0tZAcVn8DNVCDFk1zhWaWXSLC5ATf2ND45U0GswhpG2k37RljkyG82ZC5YSRa9TyIG4iKwCAokHJDKbp1C7jThMpD6tOAn6n615ccF59YiaglyLurZB2U379AZDZD"
+heroku run curl -X POST -H "Content-Type: application/json" -d '{  "setting_type":"call_to_actions",  "thread_state":"new_thread",  "call_to_actions":[    {      "payload":"Greeting"    }  ]}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAHCrQ2mhrwBAOwg7vQTAHWjz9EVYZCq7bItpn8bOQiSnDeSKX588y7Y1eTXmsHBWZBYmC2heRxtOv0PSDXoYOwQ4nj4AYSjdJ4Nv83qOaTBkyc2J22syT6NKZAZB6X706tLPqb1Tk3gGe45hlxVbvRmRZC26ijWH79XaCkfjEQZDZD"
 
 set /p DUMMY=Hit ENTER to continue..

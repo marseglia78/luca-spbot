@@ -154,7 +154,9 @@ function findMovie(userId, movieTitle) {
       { //sendMessage(userId, {text: response});
      */
       var movieObj = JSON.parse(body);
+      sendMessage(userId, movieObj.Plot);
       if (movieObj.Response === "True") {
+       sendMessage(userId, movieObj.Plot);
         var query = {user_id: userId};
         var update = {
           user_id: userId,
@@ -195,7 +197,7 @@ function findMovie(userId, movieTitle) {
               }
             };
             sendMessage(userId, message);
-            sendMessage(userId, plot);
+            //sendMessage(userId, plot);
           }
         });
       } else {

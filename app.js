@@ -142,7 +142,9 @@ function getMovieDetail(userId, field) {
 function findMovie(userId, movieTitle) {
   //request("http://www.omdbapi.com/?type=movie&t=" + movieTitle,
   //http://www.omdbapi.com/?t=rocky
-  request("http://www.omdbapi.com/?t=" + movieTitle,
+   http://www.omdbapi.com/?i=tt3896198&apikey=9ff32eb9
+  //request("http://www.omdbapi.com/?t=" + movieTitle,
+  request("http://www.omdbapi.com/?t="+movieTitle+"&apikey=9ff32eb9",
   function (error, response, body)
   {
   /*

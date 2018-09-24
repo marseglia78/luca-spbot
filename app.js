@@ -175,8 +175,9 @@ function processPostback(event) {
 
 
 function findMovie(userId, movieTitle) {
-  request("http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle, function (error, response, body) {
-    if (!error &amp;&amp; response.statusCode === 200) {
+  request("http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle, function (error, response, body)
+  {/*
+   if (!error &amp; &amp; response.statusCode === 200)   {
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {
         var query = {user_id: userId};
@@ -204,8 +205,7 @@ function findMovie(userId, movieTitle) {
                   elements: [{
                     title: movieObj.Title,
                     subtitle: "Is this the movie you are looking for?",
-                    image_url: movieObj.Poster === "N/A?http://placehold.it/350x150" : movieObj.Poster,
-                    //image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movieObj.Poster,
+                    image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movieObj.Poster,
                     buttons: [{
                       type: "postback",
                       title: "Yes",
@@ -226,8 +226,9 @@ function findMovie(userId, movieTitle) {
           console.log(movieObj.Error);
           sendMessage(userId, {text: movieObj.Error});
       }
-    } else {
-      sendMessage(userId, {text: "Something went wrong. Try again."});
     }
+   else
+   */
+   {sendMessage(userId, {text: "Something went wrong. Try again."});}
   });
 }

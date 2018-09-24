@@ -129,7 +129,7 @@ function processMessage(event) {
     }
   }
 }
-/*
+
 function getMovieDetail(userId, field) {
   Movie.findOne({user_id: userId}, function(err, movie) {
     if(err) {
@@ -139,7 +139,7 @@ function getMovieDetail(userId, field) {
     }
   });
 }
-
+/*
 function findMovie(userId, movieTitle) {
   request("http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle, function (error, response, body) {
     if (!error &amp;&amp; response.statusCode === 200) {

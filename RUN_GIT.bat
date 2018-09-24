@@ -5,4 +5,5 @@ git commit -m "Initial commit"
 git remote -v
 git push origin master
 
-#set /p DUMMY=Hit ENTER to continue..
+heroku logs --tail -a luca-spbot
+set /p DUMMY=Hit ENTER to continue..

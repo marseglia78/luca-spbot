@@ -47,7 +47,7 @@ app.post("/webhook", function (req, res) {
   }
 });
 
-/*
+
 function processPostback(event) {
   var senderId = event.sender.id;
   var payload = event.postback.payload;
@@ -77,6 +77,7 @@ function processPostback(event) {
   }
 }
 
+/*
 // sends message to user
 function sendMessage(recipientId, message) {
   request({

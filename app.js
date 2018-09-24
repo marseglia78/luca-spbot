@@ -175,7 +175,8 @@ function processPostback(event) {
 
 
 function findMovie(userId, movieTitle) {
-  request("http://www.omdbapi.com/?type=movie&t=" + movieTitle,
+  //request("http://www.omdbapi.com/?type=movie&t=" + movieTitle,
+  request("http://www.omdbapi.com/?t=" + movieTitle,
   function (error, response, body)
   {sendMessage(userId, {text: response.statusCode});
     if (error) {sendMessage(userId, {text: "ERROR!!!!"});}
@@ -231,7 +232,7 @@ function findMovie(userId, movieTitle) {
           sendMessage(userId, {text: movieObj.Error});
       }
     }
-     else {sendMessage(userId, {text: "Something went wrong. Try again."});}
+     else {sendMessage(userId, {text: "Something went wrong. Try again. with "+ movieTitle});}
    }
   });
 }

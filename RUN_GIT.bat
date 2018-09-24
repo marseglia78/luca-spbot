@@ -6,4 +6,4 @@ git remote -v
 git push origin master
 
 heroku logs --tail -a luca-spbot
-set /p DUMMY=Hit ENTER to continue..
+#set /p DUMMY=Hit ENTER to continue..

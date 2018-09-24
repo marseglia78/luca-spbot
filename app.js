@@ -153,10 +153,11 @@ function findMovie(userId, movieTitle) {
      if (response.Response === 'True')
       { //sendMessage(userId, {text: response});
      */
+      PLOT=response.Plot;
       var movieObj = JSON.parse(body);
-      sendMessage(userId, movieObj.Plot);
+      sendMessage(userId, PLOT);
       if (movieObj.Response === "True") {
-       sendMessage(userId, movieObj.Plot);
+       sendMessage(userId, PLOT);
         var query = {user_id: userId};
         var update = {
           user_id: userId,

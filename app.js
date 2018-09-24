@@ -140,21 +140,14 @@ function getMovieDetail(userId, field) {
 
 
 function findMovie(userId, movieTitle) {
-  //request("http://www.omdbapi.com/?type=movie&t=" + movieTitle,
-  //http://www.omdbapi.com/?t=rocky
-   http://www.omdbapi.com/?i=tt3896198&apikey=9ff32eb9
-  //request("http://www.omdbapi.com/?t=" + movieTitle,
-  request("http://www.omdbapi.com/?t="+movieTitle+"&apikey=9ff32eb9",
-  function (error, response, body)
-  {
-  /*
-  sendMessage(userId, {text: response.statusCode});
+  request("http://www.omdbapi.com/?t="+movieTitle+"&apikey=9ff32eb9",function (error, response, body)
+  { sendMessage(userId, {text: response.statusCode});
     if (error) {sendMessage(userId, {text: "ERROR!!!!"});}
     else
     {//if (response.statusCode===200)
      if (response.Response === 'True')
       { //sendMessage(userId, {text: response});
-     */
+
       //PLOT=response.Plot;
       var movieObj = JSON.parse(body);
       //sendMessage(userId, PLOT);
@@ -200,17 +193,17 @@ function findMovie(userId, movieTitle) {
               }
             };
             sendMessage(userId, message);
-            sendMessage(userId, plot);
+            //sendMessage(userId, plot);
           }
         });
       } else {
           console.log(movieObj.Error);
           sendMessage(userId, {text: movieObj.Error});
       }
-    /*}
+
      else {sendMessage(userId, {text: "Something went wrong with"+ movieTitle+". Try again."});}
-   }*/
-  });
+   }
+  }});
 }
 
 

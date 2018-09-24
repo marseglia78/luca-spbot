@@ -177,7 +177,7 @@ function processPostback(event) {
 function findMovie(userId, movieTitle) {
   request("http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle,
   function (error, response, body)
-  {sendMessage(userId, {text: response});
+  {sendMessage(userId, {text: response.statusCode});
     if (error) {sendMessage(userId, {text: "ERROR!!!!"});}
     else
     {if (response.statusCode === 200)
@@ -231,7 +231,7 @@ function findMovie(userId, movieTitle) {
           sendMessage(userId, {text: movieObj.Error});
       }
     }
-     else {sendMessage(userId, {text: response});}
+     else {sendMessage(userId, {text: response.statusCode});}
    }
   });
 }

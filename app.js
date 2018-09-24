@@ -181,7 +181,8 @@ function findMovie(userId, movieTitle) {
   {sendMessage(userId, {text: response.statusCode});
     if (error) {sendMessage(userId, {text: "ERROR!!!!"});}
     else
-    {if (response.statusCode === 200)
+    {//if (response.statusCode===200)
+     if (response.Response === 'True')
       { //sendMessage(userId, {text: response});
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {

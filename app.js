@@ -155,11 +155,11 @@ function findMovie(userId, movieTitle) {
      if (response.Response === 'True')
       { //sendMessage(userId, {text: response});
      */
-      PLOT=response.Plot;
+      //PLOT=response.Plot;
       var movieObj = JSON.parse(body);
-      sendMessage(userId, PLOT);
+      //sendMessage(userId, PLOT);
       if (movieObj.Response === "True") {
-       sendMessage(userId, PLOT);
+       //sendMessage(userId, PLOT);
         var query = {user_id: userId};
         var update = {
           user_id: userId,
@@ -200,7 +200,7 @@ function findMovie(userId, movieTitle) {
               }
             };
             sendMessage(userId, message);
-            //sendMessage(userId, plot);
+            sendMessage(userId, plot);
           }
         });
       } else {

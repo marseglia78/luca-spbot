@@ -176,8 +176,10 @@ function processPostback(event) {
 
 function findMovie(userId, movieTitle) {
   request("http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle, function (error, response, body)
-  {/*
-   if (!error &amp; &amp; response.statusCode === 200)   {
+  {
+   //if (!error &amp; &amp; response.statusCode === 200)
+   if (response.statusCode === 200)
+   {
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {
         var query = {user_id: userId};
@@ -228,7 +230,6 @@ function findMovie(userId, movieTitle) {
       }
     }
    else
-   */
    {sendMessage(userId, {text: "Something went wrong. Try again."});}
   });
 }

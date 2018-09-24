@@ -77,7 +77,7 @@ function processPostback(event) {
   }
 }
 
-/*
+
 // sends message to user
 function sendMessage(recipientId, message) {
   request({
@@ -95,6 +95,7 @@ function sendMessage(recipientId, message) {
   });
 }
 
+/*
 function processMessage(event) {
   if (!event.message.is_echo) {
     var message = event.message;

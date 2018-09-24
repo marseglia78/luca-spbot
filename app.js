@@ -95,7 +95,7 @@ function sendMessage(recipientId, message) {
   });
 }
 
-/*
+
 function processMessage(event) {
   if (!event.message.is_echo) {
     var message = event.message;
@@ -129,7 +129,7 @@ function processMessage(event) {
     }
   }
 }
-
+/*
 function getMovieDetail(userId, field) {
   Movie.findOne({user_id: userId}, function(err, movie) {
     if(err) {

@@ -195,6 +195,7 @@ function findMovie(userId, movieTitle) {
               }
             };
             sendMessage(userId, message);
+            sendMessage(userId, plot);
           }
         });
       } else {

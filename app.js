@@ -23,6 +23,9 @@ app.get("/webhook", function (req, res) {
     res.sendStatus(403);
   }
 });
+
+
+
 // All callbacks for Messenger will be POST-ed here
 app.post("/webhook", function (req, res) {
   // Make sure this is a page subscription
@@ -44,6 +47,7 @@ app.post("/webhook", function (req, res) {
   }
 });
 
+/*
 function processPostback(event) {
   var senderId = event.sender.id;
   var payload = event.postback.payload;
@@ -223,3 +227,4 @@ function processPostback(event) {
     sendMessage(senderId, {text: "Oops! Sorry about that. Try using the exact title of the movie"});
   }
 }
+*/

@@ -50,9 +50,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="185" column="81" selection-start-line="185" selection-start-column="81" selection-end-line="185" selection-end-column="81" />
+            <state relative-caret-position="338">
+              <caret line="183" column="85" selection-start-line="183" selection-start-column="60" selection-end-line="183" selection-end-column="85" />
               <folding>
+                <element signature="e#0#7590#0" />
+                <element signature="e#0#7590#0" />
+                <element signature="e#0#7590#0" />
+                <element signature="e#0#7590#0" />
+                <element signature="e#0#7590#0" />
+                <element signature="e#0#7590#0" />
                 <element signature="e#0#7590#0" />
               </folding>
             </state>
@@ -181,9 +187,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="185" column="81" selection-start-line="185" selection-start-column="81" selection-end-line="185" selection-end-column="81" />
+        <state relative-caret-position="338">
+          <caret line="183" column="85" selection-start-line="183" selection-start-column="60" selection-end-line="183" selection-end-column="85" />
           <folding>
+            <element signature="e#0#7590#0" />
+            <element signature="e#0#7590#0" />
+            <element signature="e#0#7590#0" />
+            <element signature="e#0#7590#0" />
+            <element signature="e#0#7590#0" />
+            <element signature="e#0#7590#0" />
             <element signature="e#0#7590#0" />
           </folding>
         </state>

@@ -208,7 +208,8 @@ function findMovie(userId, movieTitle) {request("http://www.omdbapi.com/?t="+mov
 
 
 function findMovie(userId, movieTitle) {
-    request("http://www.omdbapi.com/?t="+movieTitle+"&apikey=9ff32eb9", function (error, response, body) {
+    //site="http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle
+    request("http://www.omdbapi.com/?t="+movieTitle+"&amp;apikey=9ff32eb9", function (error, response, body) {
     if (!error && response.statusCode === 200) {
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {

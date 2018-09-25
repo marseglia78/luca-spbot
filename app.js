@@ -138,74 +138,6 @@ function getMovieDetail(userId, field) {
   });
 }
 
-/*
-function findMovie(userId, movieTitle) {request("http://www.omdbapi.com/?t="+movieTitle+"&apikey=9ff32eb9" ,
-  function (error, response, body)
-  {sendMessage(userId, {text: response.statusCode});
-   if (error) {sendMessage(userId, {text: "ERROR!!!!"});}
-   else
-   {if (response.statusCode===200)
-     //if (response.Response === 'True')
-      { //sendMessage(userId, {text: response});
-        //PLOT=response.Plot;
-       var movieObj = JSON.parse(body);
-       //sendMessage(userId, PLOT);
-       if (movieObj.Response === "True")
-       {//sendMessage(userId, PLOT);
-        var query = {user_id: userId};
-        var update =
-        {
-          user_id: userId,
-          title: movieObj.Title,
-          plot: movieObj.Plot,
-          date: movieObj.Released,
-          runtime: movieObj.Runtime,
-          director: movieObj.Director,
-          cast: movieObj.Actors,
-          rating: movieObj.imdbRating,
-          poster_url:movieObj.Poster
-        };
-        var options = {upsert: true};
-        Movie.findOneAndUpdate(query, update, options, function(err, mov) {
-          if (err) {
-            console.log("Database error: " + err);
-          } else {
-            message = {
-              attachment: {
-                type: "template",
-                payload: {
-                  template_type: "generic",
-                  elements: [{
-                    title: movieObj.Title,
-                    subtitle: "Is this the movie you are looking for?",
-                    image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movieObj.Poster,
-                    buttons: [{
-                      type: "postback",
-                      title: "Yes",
-                      payload: "Correct"
-                    }, {
-                      type: "postback",
-                      title: "No",
-                      payload: "Incorrect"
-                    }]
-                  }]
-                }
-              }
-            };
-            sendMessage(userId, message);
-            //sendMessage(userId, plot);
-          }
-        });
-      } else {
-          console.log(movieObj.Error);
-          sendMessage(userId, {text: movieObj.Error});
-      }
-
-     else {sendMessage(userId, {text: "Something went wrong with"+ movieTitle+". Try again."});}
-   }
-  }});}
-*/
-
 
 function findMovie(userId, movieTitle) {
     //site="http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle
@@ -232,7 +164,8 @@ function findMovie(userId, movieTitle) {
           rating: movieObj.imdbRating,
           poster_url:movieObj.Poster
         };
-        //sendMessage(userId, {text: plot});
+        sendMessage(userId, {text: plot});
+        /*
         var options = {upsert: true};
         Movie.findOneAndUpdate(query, update, options, function(err, mov) {
           if (err) {
@@ -262,7 +195,9 @@ function findMovie(userId, movieTitle) {
             };
             sendMessage(userId, message);
           }
+
         });
+        */
       } else {
           console.log(movieObj.Error);
           sendMessage(userId, {text: movieObj.Error});

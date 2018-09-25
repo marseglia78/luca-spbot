@@ -182,7 +182,8 @@ function findMovie(userId, movieTitle) {
                   elements: [{
                     title: movieObj.Title,
                     subtitle: "Is this the movie you are looking for?",
-                    image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movieObj.Poster,
+                    //image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movieObj.Poster,
+                    image_url: movieObj.Poster === "N/A" ? "http://placehold.it/70x30" : movieObj.Poster,
                     buttons: [{
                       type: "postback",
                       title: "Yes",

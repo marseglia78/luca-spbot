@@ -167,7 +167,7 @@ function findMovie(userId, movieTitle) {
         sendMessage(userId, {text: update.plot});
 
         var options = {upsert: true};
-        /*
+        ///*
         Movie.findOneAndUpdate(query, update, options, function(err, mov) {
           if (err) {
             console.log("Database error: " + err);
@@ -198,7 +198,7 @@ function findMovie(userId, movieTitle) {
           }
 
         });
-        */
+        //*/
       } else {
           console.log(movieObj.Error);
           sendMessage(userId, {text: movieObj.Error});

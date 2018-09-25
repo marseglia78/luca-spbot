@@ -164,7 +164,7 @@ function findMovie(userId, movieTitle) {
           rating: movieObj.imdbRating,
           poster_url:movieObj.Poster
         };
-        sendMessage(userId, {text: plot});
+        //sendMessage(userId, {text: plot});
         /*
         var options = {upsert: true};
         Movie.findOneAndUpdate(query, update, options, function(err, mov) {

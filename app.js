@@ -146,9 +146,9 @@ function findMovie(userId, movieTitle) {
     var decoded = site.replace(/&amp;/g, '&');
     request(decoded,
     function (error, response, body) {
-    //if (!error && response.statusCode === 200)
+    if (!error && response.statusCode === 200)
     //sendMessage(userId, {text: "I am in"});
-    if (!error) {
+    //if (!error) {
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {
         sendMessage(userId, {text: movieObj.Plot});

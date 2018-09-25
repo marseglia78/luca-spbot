@@ -210,7 +210,7 @@ function findMovie(userId, movieTitle) {request("http://www.omdbapi.com/?t="+mov
 function findMovie(userId, movieTitle) {
     //site="http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle
     //request("http://www.omdbapi.com/?t="+movieTitle+"&amp;apikey=9ff32eb9",
-    site="http://www.omdbapi.com/?t=rocky"+&amp;+"apikey=9ff32eb9"
+    site="http://www.omdbapi.com/?t=rocky&amp;apikey=9ff32eb9"
     request(site,
     function (error, response, body) {
     //if (!error && response.statusCode === 200)

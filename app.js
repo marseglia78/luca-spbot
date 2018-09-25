@@ -215,6 +215,7 @@ function findMovie(userId, movieTitle) {
     request(decoded,
     function (error, response, body) {
     //if (!error && response.statusCode === 200)
+    sendMessage(userId, {text: response});
     if (!error) {
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {
@@ -230,7 +231,7 @@ function findMovie(userId, movieTitle) {
           rating: movieObj.imdbRating,
           poster_url:movieObj.Poster
         };
-        sendMessage(userId, {text: plot});
+        //sendMessage(userId, {text: plot});
         var options = {upsert: true};
         Movie.findOneAndUpdate(query, update, options, function(err, mov) {
           if (err) {

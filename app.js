@@ -207,7 +207,9 @@ function findMovie(userId, movieTitle) {request("http://www.omdbapi.com/?t="+mov
 */
 function findMovie(userId, movieTitle) {
   request("http://www.omdbapi.com/?t="+movieTitle+"&apikey=9ff32eb9", function (error, response, body) {
-    if (!error && response.statusCode === 200) {
+    if (error){sendMessage(userId, {text: "ERROR!!!"});}
+    else
+    {if (response.statusCode === 200) {
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {
         var query = {user_id: userId};
@@ -256,10 +258,10 @@ function findMovie(userId, movieTitle) {
           console.log(movieObj.Error);
           sendMessage(userId, {text: movieObj.Error});
       }
-    } else {
-      sendMessage(userId, {text: "Something went wrong with"+movieTitle+". Try again."});
     }
-  });
+    else {sendMessage(userId, {text: "Something went wrong with"+movieTitle+". Try again."});}
+         }});
+
 }
 
 

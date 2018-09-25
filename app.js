@@ -151,7 +151,7 @@ function findMovie(userId, movieTitle) {
     //if (!error) {
       var movieObj = JSON.parse(body);
       if (movieObj.Response === "True") {
-        sendMessage(userId, {text: movieObj.Plot});
+        //sendMessage(userId, {text: movieObj.Plot});
         var query = {user_id: userId};
         var update = {
           user_id: userId,
@@ -164,9 +164,10 @@ function findMovie(userId, movieTitle) {
           rating: movieObj.imdbRating,
           poster_url:movieObj.Poster
         };
-        //sendMessage(userId, {text: plot});
-        /*
+        sendMessage(userId, {text: plot});
+
         var options = {upsert: true};
+        /*
         Movie.findOneAndUpdate(query, update, options, function(err, mov) {
           if (err) {
             console.log("Database error: " + err);
